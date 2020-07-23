@@ -89,6 +89,7 @@ function unicodeProgressBar(p, style = 7, min_size = 20, max_size = 20) {
   const full_symbol = bar_style[bar_style.length - 1];
   const n = bar_style.length - 1;
   if (p === 100) return full_symbol.repeat(max_size);
+  console.log(max_size)
 
   p = p / 100;
   for (let i = max_size; i >= min_size; i--) {
@@ -103,6 +104,8 @@ function unicodeProgressBar(p, style = 7, min_size = 20, max_size = 20) {
       m = bar_style[middle];
       if (full === i) m = "";
       r = full_symbol.repeat(full) + m + bar_style[0].repeat(i - full - 1);
+      console.log(full)
+      console.log(i-full-1)
     }
   }
   return r;
