@@ -11,7 +11,7 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@master
       - name: Install
         run: npm ci
       - name: Update gist
