@@ -105,7 +105,7 @@ function unicodeProgressBar(p, style = 7, min_size = 20, max_size = 20) {
       if (full === i) m = "";
       console.log(full);
       console.log(i-full-1);
-      r = full_symbol.repeat(full) + m + bar_style[0].repeat(i - full - 1);
+      r = full_symbol.repeat(full) + m + bar_style[0].repeat(i - full - 1 >= 0? i - full - 1 : 0);
 
     }
   }
